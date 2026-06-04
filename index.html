@@ -1,424 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yun Jiang — Bioinformatics Engineer</title>
-    <meta
-      name="description"
-      content="Yun Jiang's personal homepage — bioinformatics engineer at Atantares Corp."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #0a0a0a;
-        --text: #b0b0b0;
-        --prompt: #22c55e;
-        --link: #3b82f6;
-        --dim: #9ca3af;
-        --animation-duration: 1;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        :root {
-          --animation-duration: 0;
-        }
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: "JetBrains Mono", "Courier New", monospace;
-        font-size: clamp(0.8rem, 0.75rem + 0.5vw, 0.95rem);
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1.5rem;
-        min-height: 100vh;
-      }
-
-      a {
-        color: var(--link);
-        text-decoration: none;
-        transition:
-          color 0.2s,
-          text-shadow 0.2s;
-      }
-
-      a:hover,
-      a:hover .desc {
-        color: var(--prompt);
-        text-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
-      }
-
-      .prompt {
-        color: var(--prompt);
-      }
-      .dim {
-        color: var(--dim);
-      }
-      .bright {
-        color: #e0e0e0;
-      }
-
-      .line {
-        opacity: 0;
-        animation: reveal-line calc(0.05s * var(--animation-duration)) forwards;
-        white-space: pre;
-      }
-
-      @keyframes reveal-line {
-        to {
-          opacity: 1;
-        }
-      }
-
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip-path: inset(50%);
-        white-space: nowrap;
-        border: 0;
-      }
-
-      .boot-sequence {
-        margin-bottom: 2rem;
-      }
-
-      .ascii-art {
-        font-size: clamp(0.5rem, 0.45rem + 0.5vw, 0.75rem);
-        line-height: 1.2;
-        color: var(--prompt);
-        overflow-x: auto;
-        white-space: pre;
-        margin: 0;
-      }
-
-      .section {
-        margin-bottom: 0;
-      }
-
-      .neofetch-grid {
-        display: flex;
-        gap: 0 2rem;
-        align-items: flex-start;
-      }
-
-      .neofetch-art {
-        color: var(--prompt);
-        font-size: clamp(0.5rem, 0.45rem + 0.5vw, 0.75rem);
-        line-height: 1.2;
-        white-space: pre;
-        flex-shrink: 0;
-      }
-
-      .neofetch-info {
-        white-space: pre;
-      }
-
-      @media (max-width: 640px) {
-        .neofetch-grid {
-          flex-direction: column;
-          gap: 0.5rem 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="sr-only">Yun Jiang — Bioinformatics Engineer</h1>
-
-    <header>
-      <div class="boot-sequence" aria-label="Terminal boot sequence">
-        <div class="line" style="animation-delay: 0s">
-          <span class="dim">BIOS v2.0.26 — jiangyun-fun.github.io</span>
-        </div>
-        <div class="line" style="animation-delay: 0.06s">
-          <span class="dim"
-            >Memory check... <span class="prompt">OK</span></span
-          >
-        </div>
-        <div class="line" style="animation-delay: 0.12s">
-          <span class="dim">Loading kernel... bioinformatics@python</span>
-        </div>
-        <div class="line" style="animation-delay: 0.18s">
-          <span class="dim">Mounting /home/jiangy...</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 0.28s"
-          aria-hidden="true"
-        ></div>
-        <pre
-          class="line ascii-art"
-          role="presentation"
-          aria-hidden="true"
-          style="animation-delay: 0.34s"
-        >
-       ██╗███╗   ██╗███████╗██╗    ██╗
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yun Jiang — Bioinformatics Engineer</title>
+<meta name="description" content="Yun Jiang's personal homepage — bioinformatics engineer at Atantares Corp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --text: #b0b0b0;
+    --prompt: #22c55e;
+    --link: #3b82f6;
+    --dim: #9ca3af;
+    --animation-duration: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :root { --animation-duration: 0; }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: clamp(0.8rem, 0.75rem + 0.5vw, 0.95rem);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    min-height: 100vh;
+  }
+  a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+  }
+  a:hover { color: var(--prompt); text-shadow: 0 0 8px rgba(34, 197, 94, 0.4); }
+  .prompt { color: var(--prompt); }
+  .dim { color: var(--dim); }
+  .bright { color: #e0e0e0; }
+  .line {
+    opacity: 0;
+    animation: reveal-line calc(0.05s * var(--animation-duration)) forwards;
+    white-space: pre;
+  }
+  @keyframes reveal-line { to { opacity: 1; } }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0;
+    margin: -1px; overflow: hidden; clip-path: inset(50%);
+    white-space: nowrap; border: 0;
+  }
+  .boot-sequence { margin-bottom: 2rem; }
+  .ascii-art {
+    font-size: clamp(0.5rem, 0.45rem + 0.5vw, 0.75rem);
+    line-height: 1.2; color: var(--prompt);
+    overflow-x: auto; white-space: pre; margin: 0;
+  }
+  .section { margin-bottom: 0; }
+  .neofetch-grid { display: flex; gap: 0 2rem; align-items: flex-start; }
+  .neofetch-art {
+    color: var(--prompt);
+    font-size: clamp(0.5rem, 0.45rem + 0.5vw, 0.75rem);
+    line-height: 1.2; white-space: pre; flex-shrink: 0; margin: 0;
+  }
+  .neofetch-info { white-space: pre; }
+  @media (max-width: 640px) {
+    .neofetch-grid { flex-direction: column; gap: 0.5rem 0; }
+  }
+</style>
+</head>
+<body>
+<h1 class="sr-only">Yun Jiang — Bioinformatics Engineer</h1>
+<header>
+  <div class="boot-sequence" aria-label="Terminal boot sequence">
+    <div class="line" style="animation-delay:0s"><span class="dim">BIOS v2.0.26 — jiangyun-fun.github.io</span></div>
+    <div class="line" style="animation-delay:0.06s"><span class="dim">Memory check... <span class="prompt">OK</span></span></div>
+    <div class="line" style="animation-delay:0.12s"><span class="dim">Loading kernel... bioinformatics@python</span></div>
+    <div class="line" style="animation-delay:0.18s"><span class="dim">Mounting /home/jiangy...</span></div>
+    <div class="line" style="animation-delay:0.28s" aria-hidden="true"><br></div>
+    <pre class="line ascii-art" role="presentation" aria-hidden="true" style="animation-delay:0.34s">       ██╗███╗   ██╗███████╗██╗    ██╗
        ██║████╗  ██║██╔════╝██║    ██║
        ██║██╔██╗ ██║█████╗  ██║ █╗ ██║
        ██║██║╚██╗██║██╔══╝  ██║███╗██║
        ██║██║ ╚████║██║     ╚███╔███║
-       ╚═╝╚═╝  ╚═══╝╚═╝      ╚══╝╚══╝</pre
-        >
-        <div
-          class="line"
-          style="animation-delay: 0.54s"
-          aria-hidden="true"
-        ></div>
-        <div class="line" style="animation-delay: 0.6s">
-          <span class="bright">YUN JIANG</span> —
-          <span class="dim"
-            >Bioinformatics Engineer @
-            <a
-              href="https://www.atantares.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Atantares</a
-            ></span
-          >
-        </div>
-        <div class="line" style="animation-delay: 0.66s">
-          <span class="dim" id="last-login">Last login: ...</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 0.72s"
-          aria-hidden="true"
-        ></div>
-      </div>
-    </header>
-
-    <main>
-      <section aria-labelledby="about-heading" class="section">
-        <h2 id="about-heading" class="sr-only">About</h2>
-        <div class="line" style="animation-delay: 0.82s">
-          <span class="prompt">$</span> <span class="bright">cat about.md</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 0.88s"
-          aria-hidden="true"
-        ></div>
-        <div class="line" style="animation-delay: 0.94s">
-          <span class="dim"
-            >&gt; Bioinformatics engineer at Atantares Corp. working on</span
-          >
-        </div>
-        <div class="line" style="animation-delay: 1s">
-          <span class="dim"
-            >&gt; CRISPR screening, NGS data analysis, and molecular</span
-          >
-        </div>
-        <div class="line" style="animation-delay: 1.06s">
-          <span class="dim">&gt; assay design.</span>
-        </div>
-        <div class="line" style="animation-delay: 1.12s">
-          <span class="dim">&gt;</span>
-        </div>
-        <div class="line" style="animation-delay: 1.18s">
-          <span class="dim"
-            >&gt; Building analysis pipelines and tools for
-            high-throughput</span
-          >
-        </div>
-        <div class="line" style="animation-delay: 1.24s">
-          <span class="dim">&gt; sequencing workflows.</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 1.3s"
-          aria-hidden="true"
-        ></div>
-      </section>
-
-      <section aria-labelledby="projects-heading" class="section">
-        <h2 id="projects-heading" class="sr-only">Projects</h2>
-        <div class="line" style="animation-delay: 1.36s">
-          <span class="prompt">$</span>
-          <span class="bright">ls -la ~/projects/</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 1.42s"
-          aria-hidden="true"
-        ></div>
-        <div class="line" style="animation-delay: 1.48s">
-          <span class="dim">drwxr-xr-x </span
-          ><a
-            href="https://github.com/jiangyun-fun/cs-tag"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span class="bright">cs-tag/</span></a
-          ><span class="dim"> CS tag generator for BAM files (Rust)</span>
-        </div>
-        <div class="line" style="animation-delay: 1.54s">
-          <span class="dim">drwxr-xr-x </span
-          ><a
-            href="https://github.com/jiangyun-fun/scihub-cli"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span class="bright">scihub-cli/</span></a
-          ><span class="dim"> Paper search &amp; download CLI (Python)</span>
-        </div>
-        <div class="line" style="animation-delay: 1.6s">
-          <span class="dim">drwxr-xr-x </span
-          ><a
-            href="https://github.com/jiangyun-fun/quarto-passage-xref"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span class="bright">quarto-passage-xref/</span></a
-          ><span class="dim"> Inline cross-references for Quarto (Lua)</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 1.66s"
-          aria-hidden="true"
-        ></div>
-      </section>
-
-      <section aria-labelledby="skills-heading" class="section">
-        <h2 id="skills-heading" class="sr-only">Skills</h2>
-        <div class="line" style="animation-delay: 1.72s">
-          <span class="prompt">$</span> <span class="bright">neofetch</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 1.78s"
-          aria-hidden="true"
-        ></div>
-        <div class="line neofetch-grid" style="animation-delay: 1.84s">
-          <pre class="neofetch-art" role="presentation" aria-hidden="true">
-   /\
+       ╚═╝╚═╝  ╚═══╝╚═╝      ╚══╝╚══╝</pre>
+    <div class="line" style="animation-delay:0.54s" aria-hidden="true"><br></div>
+    <div class="line" style="animation-delay:0.6s"><span>  <span class="bright">YUN JIANG</span> — <span class="dim">Bioinformatics Engineer @ <a href="https://www.atantares.com/" target="_blank" rel="noopener noreferrer">Atantares</a></span></span></div>
+    <div class="line" style="animation-delay:0.66s"><span>  <span class="dim" id="last-login">Last login: ...</span></span></div>
+    <div class="line" style="animation-delay:0.72s" aria-hidden="true"><br></div>
+  </div>
+</header>
+<main>
+  <section aria-labelledby="about-heading" class="section">
+    <h2 id="about-heading" class="sr-only">About</h2>
+    <div class="line" style="animation-delay:0.82s"><span class="prompt">$</span> <span class="bright">cat about.md</span></div>
+    <div class="line" style="animation-delay:0.88s" aria-hidden="true"><br></div>
+    <div class="line" style="animation-delay:0.94s"><span class="dim">&gt; Bioinformatics engineer at Atantares Corp. working on</span></div>
+    <div class="line" style="animation-delay:1s"><span class="dim">&gt; CRISPR screening, NGS data analysis, and molecular</span></div>
+    <div class="line" style="animation-delay:1.06s"><span class="dim">&gt; assay design.</span></div>
+    <div class="line" style="animation-delay:1.12s"><span class="dim">&gt;</span></div>
+    <div class="line" style="animation-delay:1.18s"><span class="dim">&gt; Building analysis pipelines and tools for high-throughput</span></div>
+    <div class="line" style="animation-delay:1.24s"><span class="dim">&gt; sequencing workflows.</span></div>
+    <div class="line" style="animation-delay:1.3s" aria-hidden="true"><br></div>
+  </section>
+  <section aria-labelledby="projects-heading" class="section">
+    <h2 id="projects-heading" class="sr-only">Projects</h2>
+    <div class="line" style="animation-delay:1.36s"><span class="prompt">$</span> <span class="bright">ls -la ~/projects/</span></div>
+    <div class="line" style="animation-delay:1.42s" aria-hidden="true"><br></div>
+    <div class="line" style="animation-delay:1.48s"><span class="dim">drwxr-xr-x  </span><a href="https://github.com/jiangyun-fun/cs-tag" target="_blank" rel="noopener noreferrer"><span class="bright">cs-tag/</span></a><span class="dim">               CS tag generator for BAM files (Rust)</span></div>
+    <div class="line" style="animation-delay:1.54s"><span class="dim">drwxr-xr-x  </span><a href="https://github.com/jiangyun-fun/scihub-cli" target="_blank" rel="noopener noreferrer"><span class="bright">scihub-cli/</span></a><span class="dim">           Paper search &amp; download CLI (Python)</span></div>
+    <div class="line" style="animation-delay:1.6s"><span class="dim">drwxr-xr-x  </span><a href="https://github.com/jiangyun-fun/quarto-passage-xref" target="_blank" rel="noopener noreferrer"><span class="bright">quarto-passage-xref/</span></a><span class="dim">  Inline cross-references for Quarto (Lua)</span></div>
+    <div class="line" style="animation-delay:1.66s" aria-hidden="true"><br></div>
+  </section>
+  <section aria-labelledby="skills-heading" class="section">
+    <h2 id="skills-heading" class="sr-only">Skills</h2>
+    <div class="line" style="animation-delay:1.72s"><span class="prompt">$</span> <span class="bright">neofetch</span></div>
+    <div class="line" style="animation-delay:1.78s" aria-hidden="true"><br></div>
+    <div class="line neofetch-grid" style="animation-delay:1.84s">
+      <pre class="neofetch-art" role="presentation" aria-hidden="true">   /\
   /  \
  /    \
 /  ██  \
 |  ████  |
 |  ██████  |
 |  ████████  |
-\______________/</pre
-          >
-          <div class="neofetch-info">
-            <span class="bright">yun@bioinformatics</span>
-            <span class="dim">------------------</span>
-            <span class="dim">OS: </span>Ubuntu
-            <span class="dim">Shell: </span>zsh
-            <span class="dim">Editor: </span>Neovim
-            <span class="dim">Langs: </span>Python · R · Lua
-            <span class="dim">Tools: </span>Snakemake · Quarto · Docker
-          </div>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 1.9s"
-          aria-hidden="true"
-        ></div>
-      </section>
-
-      <section aria-labelledby="contact-heading" class="section">
-        <h2 id="contact-heading" class="sr-only">Contact</h2>
-        <div class="line" style="animation-delay: 1.96s">
-          <span class="prompt">$</span>
-          <span class="bright">cat ~/.contacts</span>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 2.02s"
-          aria-hidden="true"
-        ></div>
-        <div class="line" style="animation-delay: 2.08s">
-          <span class="dim">GitHub </span><span class="dim">→</span>
-          <a
-            href="https://github.com/jiangyun-fun"
-            target="_blank"
-            rel="noopener noreferrer"
-            >github.com/jiangyun-fun</a
-          >
-        </div>
-        <div class="line" style="animation-delay: 2.14s">
-          <span class="dim">Org </span><span class="dim">→</span>
-          <a
-            href="https://www.atantares.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >atantares.com</a
-          >
-        </div>
-        <div class="line" style="animation-delay: 2.2s">
-          <span class="dim">Bilibili </span><span class="dim">→</span>
-          <a
-            href="https://space.bilibili.com/425245752"
-            target="_blank"
-            rel="noopener noreferrer"
-            >space.bilibili.com/425245752</a
-          >
-        </div>
-        <div class="line" style="animation-delay: 2.26s">
-          <span class="dim">Email </span><span class="dim">→</span>
-          <a href="mailto:jiangyunacw@gmail.com">jiangyunacw@gmail.com</a>
-        </div>
-        <div
-          class="line"
-          style="animation-delay: 2.32s"
-          aria-hidden="true"
-        ></div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="line" style="animation-delay: 2.38s">
-        <span class="prompt">$</span> <span class="bright">exit</span>
-      </div>
-      <div class="line" style="animation-delay: 2.44s">
-        <span class="dim"># Connection closed.</span>
-      </div>
-    </footer>
-
-    <script>
-      (function () {
-        "use strict";
-
-        var now = new Date();
-        var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        var months = [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
-
-        var loginStr = `Last login: ${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()} ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")} from Shuzhou`;
-
-        var el = document.getElementById("last-login");
-        if (el) {
-          el.textContent = loginStr;
-        }
-      })();
-    </script>
-  </body>
+\________________/</pre>
+      <div class="neofetch-info"><span class="bright">yun@bioinformatics</span>
+<span class="dim">------------------</span>
+<span class="dim">OS:      </span>Ubuntu
+<span class="dim">Shell:   </span>zsh
+<span class="dim">Editor:  </span>Neovim
+<span class="dim">Langs:   </span>Python · R · Lua
+<span class="dim">Tools:   </span>Snakemake · Quarto · Docker</div>
+    </div>
+    <div class="line" style="animation-delay:1.9s" aria-hidden="true"><br></div>
+  </section>
+  <section aria-labelledby="contact-heading" class="section">
+    <h2 id="contact-heading" class="sr-only">Contact</h2>
+    <div class="line" style="animation-delay:1.96s"><span class="prompt">$</span> <span class="bright">cat ~/.contacts</span></div>
+    <div class="line" style="animation-delay:2.02s" aria-hidden="true"><br></div>
+    <div class="line" style="animation-delay:2.08s"><span class="dim">GitHub   </span><span class="dim"> → </span><a href="https://github.com/jiangyun-fun" target="_blank" rel="noopener noreferrer">github.com/jiangyun-fun</a></div>
+    <div class="line" style="animation-delay:2.14s"><span class="dim">Org      </span><span class="dim"> → </span><a href="https://www.atantares.com/" target="_blank" rel="noopener noreferrer">atantares.com</a></div>
+    <div class="line" style="animation-delay:2.2s"><span class="dim">Bilibili </span><span class="dim"> → </span><a href="https://space.bilibili.com/425245752" target="_blank" rel="noopener noreferrer">space.bilibili.com/425245752</a></div>
+    <div class="line" style="animation-delay:2.26s"><span class="dim">Email    </span><span class="dim"> → </span><a href="mailto:jiangyunacw@gmail.com">jiangyunacw@gmail.com</a></div>
+    <div class="line" style="animation-delay:2.32s" aria-hidden="true"><br></div>
+  </section>
+</main>
+<footer>
+  <div class="line" style="animation-delay:2.38s"><span class="prompt">$</span> <span class="bright">exit</span></div>
+  <div class="line" style="animation-delay:2.44s"><span class="dim"># Connection closed.</span></div>
+</footer>
+<script>
+(function () {
+  'use strict';
+  var now = new Date();
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var loginStr = `Last login: ${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')} from Shuzhou`;
+  var el = document.getElementById('last-login');
+  if (el) { el.textContent = loginStr; }
+})();
+</script>
+</body>
 </html>

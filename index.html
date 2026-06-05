@@ -131,12 +131,24 @@
 <b style="color:#B9AF64">1</b><b style="color:#B8B368">1</b><b style="color:#D8BA44">0</b><b style="color:#F1C42D">0</b><b style="color:#E7B722">1</b><b style="color:#C29111">0</b><b style="color:#A2750A">0</b><b style="color:#966E11">1</b><b style="color:#A9811A">0</b><b style="color:#9C6F19">1</b><b style="color:#BA8721">0</b><b style="color:#A27710">0</b><b style="color:#80590C">1</b><b style="color:#9A700E">1</b><b style="color:#AB7E0C">1</b><b style="color:#AC8336">1</b><b style="color:#C09766">1</b><b style="color:#B3947D">0</b><b style="color:#DEB778">1</b><b style="color:#E7BA56">1</b><b style="color:#E3B223">0</b><b style="color:#CE9A15">0</b><b style="color:#C59F33">1</b><b style="color:#938743">0</b><b style="color:#505D4B">0</b>
 <b style="color:#4A4126">0</b><b style="color:#997525">0</b><b style="color:#DCA81D">1</b><b style="color:#E0B01C">1</b><b style="color:#CB9B1D">0</b><b style="color:#AD7F17">0</b><b style="color:#8F6212">1</b><b style="color:#BF941C">1</b><b style="color:#A4780C">0</b><b style="color:#815024">1</b><b style="color:#8E5440">0</b><b style="color:#E2B01F">1</b><b style="color:#BC9019">0</b><b style="color:#916512">0</b><b style="color:#966912">0</b><b style="color:#D5AD80">1</b><b style="color:#F0B79C">0</b><b style="color:#DCA680">0</b><b style="color:#D7AF7D">0</b><b style="color:#D0A95B">1</b><b style="color:#926A28">1</b><b style="color:#8A4C07">0</b><b style="color:#E27B03">1</b><b style="color:#EB8004">0</b><b style="color:#BE7622">1</b></pre>
       <div class="neofetch-info"><span class="bright">yun@bioinformatics</span>
-<span class="dim">------------------</span>
-<span class="dim">OS:      </span>Ubuntu
-<span class="dim">Shell:   </span>zsh
-<span class="dim">Editor:  </span>Neovim
-<span class="dim">Langs:   </span>Python · R · Lua
-<span class="dim">Tools:   </span>Snakemake · Quarto · Docker</div>
+<span class="dim">-------------------</span>
+<span class="dim">Location:   </span>Shuzhou, China
+<span class="dim">Org:        </span><a href="https://www.atantares.com/" target="_blank" rel="noopener noreferrer">Atantares Corp.</a>
+<span class="dim">Field:      </span>Bioinformatics · NGS
+<span class="dim">Uptime:     </span><span id="uptime">...</span>
+<span class="dim">Shell:      </span>zsh 5.9
+<span class="dim">Editor:     </span>Neovim
+<span class="dim">Terminal:   </span>zellij 0.44.3
+<span class="dim">Languages:  </span>Python · R · Lua
+<span class="dim">Tools:      </span>Snakemake · Quarto · Docker
+<span class="dim">CPU:        </span>Intel Xeon W-2235
+<span class="dim">GPU:        </span>NVIDIA T1000 8GB
+<span class="dim">Memory:     </span>503 GiB
+<span class="dim">Display:    </span>4 monitors
+<span class="dim">Host:       </span>Precision 5820 Tower
+<span> </span>
+<span style="color:#303030">██</span><span> </span><span style="color:#c00">██</span><span> </span><span style="color:#4e9a06">██</span><span> </span><span style="color:#c4a000">██</span><span> </span><span style="color:#3465a4">██</span><span> </span><span style="color:#75507b">██</span><span> </span><span style="color:#06989a">██</span><span> </span><span style="color:#d3d7cf">██</span>
+<span style="color:#555753">██</span><span> </span><span style="color:#ef2929">██</span><span> </span><span style="color:#8ae234">██</span><span> </span><span style="color:#fce94f">██</span><span> </span><span style="color:#729fcf">██</span><span> </span><span style="color:#ad7fa8">██</span><span> </span><span style="color:#34e2e2">██</span><span> </span><span style="color:#eeeeec">██</span></div>
     </div>
     <div class="line" style="animation-delay:1.9s" aria-hidden="true"><br></div>
   </section>
@@ -161,9 +173,18 @@
   var now = new Date();
   var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var loginStr = `Last login: ${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')} from Shuzhou`;
-  var el = document.getElementById('last-login');
-  if (el) { el.textContent = loginStr; }
+  var loginStr = 'Last login: ' + days[now.getDay()] + ' ' + months[now.getMonth()] + ' ' + now.getDate() + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0') + ' from Shuzhou';
+  var loginEl = document.getElementById('last-login');
+  if (loginEl) { loginEl.textContent = loginStr; }
+
+  var birthday = new Date('2021-12-12T15:00:00');
+  var y = now.getFullYear() - birthday.getFullYear();
+  var m = now.getMonth() - birthday.getMonth();
+  var d = now.getDate() - birthday.getDate();
+  if (d < 0) { m--; d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); }
+  if (m < 0) { y--; m += 12; }
+  var uptimeEl = document.getElementById('uptime');
+  if (uptimeEl) { uptimeEl.textContent = y + ' years, ' + m + ' months, ' + d + ' days'; }
 })();
 </script>
 </body>
